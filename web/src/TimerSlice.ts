@@ -1,15 +1,15 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
-interface SpikeState {
+interface TimerState {
   count: number
 }
 
-const initialState: SpikeState = {
+const initialState: TimerState = {
   count: 0,
 }
 
 export const timerSlice = createSlice({
-  name: 'spike',
+  name: 'timer',
   initialState,
   reducers: {
     setCount: (state, action: PayloadAction<number>) => {
@@ -18,5 +18,4 @@ export const timerSlice = createSlice({
   }
 })
 
-export default timerSlice
 export const { setCount } = timerSlice.actions

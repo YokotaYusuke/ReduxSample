@@ -6,7 +6,7 @@ import { setCount } from './TimerSlice.ts'
 const startCountUp = () => {
   return async (dispatch: AppDispatch, getState: () => RootState) => {
     const timer = setInterval(() => {
-      const { count } = getState().spike
+      const { count } = getState().timer
       if (count < 10) {
         dispatch(setCount(count + 1))
       } else {
@@ -16,8 +16,8 @@ const startCountUp = () => {
   }
 }
 
-export default function SpikeView() {
-  const {count} = useSelector((state: RootState) => state.spike)
+export default function TimerPage() {
+  const {count} = useSelector((state: RootState) => state.timer)
   const dispatch: AppDispatch = useDispatch()
 
   useEffect(() => {

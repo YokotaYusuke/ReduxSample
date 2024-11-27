@@ -3,7 +3,7 @@ import { timerSlice } from './TimerSlice.ts'
 
 export const store = configureStore({
   reducer: {
-    spike: timerSlice.reducer,
+    timer: timerSlice.reducer,
   }
 })
 
